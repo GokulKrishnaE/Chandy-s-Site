@@ -398,6 +398,32 @@ new Swiper(".aboutSwiper", {
         },
       },
     });
+   var swiper = new Swiper(".experienceSlider", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".expSliderNext",
+        prevEl: ".expSliderPrev",
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 50,
+        },
+      },
+    });
 
   document.querySelectorAll('.fadeImageWrap').forEach(el => {
   const color = el.dataset.fadeColor || '#000';
