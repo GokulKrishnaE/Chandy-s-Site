@@ -375,6 +375,7 @@ new Swiper(".aboutSwiper", {
    var swiper = new Swiper(".heroCardSlider", {
       slidesPerView: 1,
       spaceBetween: 10,
+      loop: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -401,6 +402,7 @@ new Swiper(".aboutSwiper", {
    var swiper = new Swiper(".experienceSlider", {
       slidesPerView: 1,
       spaceBetween: 10,
+      loop: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -408,6 +410,33 @@ new Swiper(".aboutSwiper", {
       navigation: {
         nextEl: ".expSliderNext",
         prevEl: ".expSliderPrev",
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 50,
+        },
+      },
+    });
+   var swiper = new Swiper(".gallerySlider", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".gallSliderNext",
+        prevEl: ".gallSliderPrev",
       },
       breakpoints: {
         640: {
