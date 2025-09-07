@@ -346,6 +346,13 @@ $(document).ajaxStop(function(){
   $('html,body').removeClass('overflow-hidden')
  });
 
+ new Mmenu( "#mmmenu", {
+      "offCanvas": {
+        "position": "left"
+      },
+      "theme": "light"
+  });
+
  
 new Swiper(".aboutSwiper", {
     pagination: {
