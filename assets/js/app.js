@@ -73,20 +73,21 @@ $('input[name="paymentMode"]').change(function(){
     slidesPerView: 1,
     pagination: false
   });
-  new Swiper(".mySwiper", {
-    effect: "coverflow",
+  new Swiper(".testimonialSlider", {
+    // effect: "coverflow",
+     parallax: true,
     grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
-    },
+    // centeredSlides: true,
+    slidesPerView: 1,
+    // coverflowEffect: {
+    //   rotate: 50,
+    //   stretch: 0,
+    //   depth: 100,
+    //   modifier: 1,
+    //   slideShadows: true,
+    // },
     pagination: {
-      el: ".swiper-pagination",
+      el: ".swiper-pagination-testimonial",
     },
   });
   new Swiper('.photos-slider', {
@@ -114,7 +115,7 @@ $('input[name="paymentMode"]').change(function(){
     },
     slidesPerView: 'auto',
     pagination: {
-      el: '.swiper-pagination',
+      // el: '.swiper-pagination',
       type: 'bullets',
       clickable: true
     },
@@ -384,7 +385,7 @@ new Swiper(".aboutSwiper", {
       spaceBetween: 10,
       loop: true,
       pagination: {
-        el: ".swiper-pagination",
+        // el: ".swiper-pagination",
         clickable: true,
       },
       navigation: {
@@ -411,7 +412,7 @@ new Swiper(".aboutSwiper", {
       spaceBetween: 10,
       loop: true,
       pagination: {
-        el: ".swiper-pagination",
+        // el: ".swiper-pagination",
         clickable: true,
       },
       navigation: {
@@ -438,7 +439,7 @@ new Swiper(".aboutSwiper", {
       spaceBetween: 10,
       loop: true,
       pagination: {
-        el: ".swiper-pagination",
+        // el: ".swiper-pagination",
         clickable: true,
       },
       navigation: {
