@@ -461,6 +461,33 @@ new Swiper(".aboutSwiper", {
         },
       },
     });
+   var swiper = new Swiper(".roomsSlider", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      pagination: {
+        // el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".gallSliderNext",
+        prevEl: ".gallSliderPrev",
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 50,
+        },
+      },
+    });
 
   document.querySelectorAll('.fadeImageWrap').forEach(el => {
   const color = el.dataset.fadeColor || '#000';
@@ -499,6 +526,10 @@ $(window).on('scroll', function () {
       $('.fixedWhatsapp,.footerFixedMenu').removeClass('active');
     }
  });
+
+ document.querySelectorAll('.stickybg-section').forEach(el => {
+  el.style.backgroundImage = `url(${el.dataset.url})`;
+});
 
  $('#scrollToTop').click(function(e) {
   e.preventDefault();
