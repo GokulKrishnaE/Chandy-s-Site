@@ -314,11 +314,13 @@ $(document).ready(function () {
   })
 
 
+
 })
 
 
 
 $(document).ajaxStop(function () {
+
   $('.match-height').matchHeight()
   $('.card-content .card-top').matchHeight()
   $('[data-bs-toggle="tooltip"]').tooltip()
@@ -351,13 +353,38 @@ $(document).ajaxStop(function () {
     $('html,body').removeClass('overflow-hidden')
   });
 
-  new Mmenu("#mmmenu", {
-    "offCanvas": {
-      "position": "left"
-    },
-    "theme": "light"
+  // new Mmenu("#mmmenu", {
+  //   "offCanvas": {
+  //     "position": "left",
+  //     use: '(max-width: 991px)'
+  //   },
+  //   "theme": "light"
+  // });
+
+  let mmenuAPI = null;
+
+  function initMmenu() {
+    if (!mmenuAPI && window.innerWidth < 992) {
+      const menu = new Mmenu("#mmmenu", {
+        offCanvas: true,
+      });
+      mmenuAPI = menu.API;
+    }
+  }
+
+  function destroyMmenu() {
+    if (mmenuAPI) {
+      mmenuAPI.destroy(); // completely removes mmenu instance
+      mmenuAPI = null;
+    }
+  }
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth < 992) initMmenu();
+    else destroyMmenu();
   });
 
+  initMmenu();
 
   new Swiper(".aboutSwiper", {
     pagination: {
@@ -382,6 +409,33 @@ $(document).ajaxStop(function () {
     //     document.querySelector(".bgImage").src = newBg;
     //   }
     // }
+  });
+
+    var swiper = new Swiper(".reviewsSlider", {
+    spaceBetween: 10,
+    loop: true,
+    pagination: {
+      // el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".review-button-next",
+      prevEl: ".review-button-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 50,
+      },
+    },
   });
 
   var swiper = new Swiper(".heroCardSlider", {
