@@ -353,6 +353,12 @@ $(document).ajaxStop(function () {
     $('html,body').removeClass('overflow-hidden')
   });
 
+  $('.paynowBox').each(function () { 
+    $(this).click(function(){
+      $('.paynowBox').removeClass('active')
+      $(this).addClass('active')
+    })
+   })
   // new Mmenu("#mmmenu", {
   //   "offCanvas": {
   //     "position": "left",
