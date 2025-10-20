@@ -353,12 +353,12 @@ $(document).ajaxStop(function () {
     $('html,body').removeClass('overflow-hidden')
   });
 
-  $('.paynowBox').each(function () { 
-    $(this).click(function(){
+  $('.paynowBox').each(function () {
+    $(this).click(function () {
       $('.paynowBox').removeClass('active')
       $(this).addClass('active')
     })
-   })
+  })
   // new Mmenu("#mmmenu", {
   //   "offCanvas": {
   //     "position": "left",
@@ -374,6 +374,7 @@ $(document).ajaxStop(function () {
       const menu = new Mmenu("#mmmenu", {
         offCanvas: true,
       });
+
       mmenuAPI = menu.API;
     }
   }
@@ -417,7 +418,7 @@ $(document).ajaxStop(function () {
     // }
   });
 
-    var swiper = new Swiper(".reviewsSlider", {
+  var swiper = new Swiper(".reviewsSlider", {
     spaceBetween: 10,
     loop: true,
     pagination: {
@@ -458,15 +459,16 @@ $(document).ajaxStop(function () {
     },
     breakpoints: {
       640: {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 20,
+        centeredSlides: true
       },
       768: {
-        slidesPerView: 4,
+        slidesPerView: 2,
         spaceBetween: 40,
       },
       1024: {
-        slidesPerView: 4,
+        slidesPerView: 2,
         spaceBetween: 50,
       },
     },
