@@ -9,54 +9,18 @@
     </div>
   </div>
 </div> -->
- <nav id="mmmenu">
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/work">Our work</a></li>
-        <li><span>About us</span>
-            <ul>
-                <li><a href="/about/history">History</a></li>
-                <li><span>The team</span>
-                    <ul>
-                        <li><a href="/about/team/management">Management</a></li>
-                        <li><a href="/about/team/sales">Sales</a></li>
-                        <li><a href="/about/team/development">Development</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li><span>Services</span>
-            <ul>
-                <li><a href="/services/design">Design</a></li>
-                <li><a href="/services/development">Development</a></li>
-                <li><a href="/services/marketing">Marketing</a></li>
-            </ul>
-        </li>
-        <li><a href="/contact">Contact</a></li>
-        <li>
-            <span class="mb-3 f18 mt-4 text-primary-dark mob-nav-padding">Social Links</span>
-            <ul class="socialLinks">
-              <li class="w-100">
-                <span class="d-flex gap-3 w-100">
-                  <a href="javascript:void(0)" class="icon whatsapp"><i class="fa fa-whatsapp"></i></a>
-                  <a href="javascript:void(0)" class="icon instagram"><i class="fa fa-instagram"></i></a>
-                  <a href="javascript:void(0)" class="icon facebook"><i class="fa fa-facebook"></i></a>
-                  <a href="javascript:void(0)" class="icon email"><i class="fas fa-envelope"></i></a>
-                </span>
-              </li>
-            </ul>
-        </li>
-    </ul>
-  </nav>
 
 <div class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
       <a class="navbar-brand logo" href="#">
         <img class="img-fluid" src="./assets/images/logo.png" alt="">
       </a>
-      <a class="navbar-toggler" type="button" href="#mmmenu">
-        <i class="fas fa-bars" aria-hidden="true"></i>
-      </a>
+       <div class="d-lg-none">
+         <a href="javascript:void(0)" class="btn btn-primary btn-sm ms-5">Book Now <i class="fas fa-arrow-right ms-2"></i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav">
           <button class="nav-mob-close" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -80,8 +44,20 @@
           <li class="nav-item">
             <a class="nav-link" href="javascript:void(0)"><i class="fas fa-image me-2 d-lg-none"></i> About</a>
           </li>
-          <li class="nav-item dropdown-center">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0)"><i class="fas fa-image me-2 d-lg-none"></i> Hotels & Resorts</a>
+          <li class="nav-item dropdown d-lg-none">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                <div class="d-flex align-items-center justify-content-between">
+                  <span><i class="fas fa-image me-2 d-lg-none"></i> Hotels & Resorts</span>
+                  <span><i class="fas fa-chevron-down"></i></span>
+                </div>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="resort-home.html">Windy's woods Resort</a></li>
+              <li><a href="resort-home.html">Drizzle Drops</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown-center d-none d-lg-block">
+            <a class="nav-link dropdown-toggle" href="hotels-resorts.html"><i class="fas fa-image me-2 d-lg-none"></i> Hotels & Resorts</a>
             <ul class="dropdown-menu twoResortDropdown">
               <li><span class="dropdown-item">
                   <div class="resortItem">
@@ -92,7 +68,7 @@
                       <div class="resortlogo"><img src="./assets/images/windywoodslogo.png" alt=""></div>
                       <h3 class="resortname">Windy Woods</h3>
                       <h4 class="placename">Munnar</h4>
-                      <a href="javascript:void(0)">View Property</a>
+                      <a href="resort-home.html">View Property</a>
                     </div>
                   </div>
               </a></li>
@@ -105,7 +81,7 @@
                       <div class="resortlogo"><img src="./assets/images/drizzlelogo.svg" alt=""></div>
                       <h3 class="resortname">Drizzle Drops</h3>
                       <h4 class="placename">Munnar</h4>
-                      <a href="javascript:void(0)">View Property</a>
+                      <a href="resort-home.html">View Property</a>
                     </div>
                   </div>
               </a></li>
@@ -119,9 +95,6 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact-us.html"><i class="fas fa-message me-2 d-lg-none"></i> Contact</a>
-          </li>
-          <li class="nav-item">
-            <a href="javascript:void(0)" class="btn btn-primary btn-sm ms-5">Book Now <i class="fas fa-arrow-right ms-2"></i></a>
           </li>
         </ul>
         <div class="d-lg-none">

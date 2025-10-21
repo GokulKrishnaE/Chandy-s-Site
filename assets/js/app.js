@@ -367,31 +367,31 @@ $(document).ajaxStop(function () {
   //   "theme": "light"
   // });
 
-  let mmenuAPI = null;
+  // let mmenuAPI = null;
 
-  function initMmenu() {
-    if (!mmenuAPI && window.innerWidth < 992) {
-      const menu = new Mmenu("#mmmenu", {
-        offCanvas: true,
-      });
+  // function initMmenu() {
+  //   if (!mmenuAPI && window.innerWidth < 992) {
+  //     const menu = new Mmenu("#mmmenu", {
+  //       offCanvas: true,
+  //     });
 
-      mmenuAPI = menu.API;
-    }
-  }
+  //     mmenuAPI = menu.API;
+  //   }
+  // }
 
-  function destroyMmenu() {
-    if (mmenuAPI) {
-      mmenuAPI.destroy(); // completely removes mmenu instance
-      mmenuAPI = null;
-    }
-  }
+  // function destroyMmenu() {
+  //   if (mmenuAPI) {
+  //     mmenuAPI.destroy(); // completely removes mmenu instance
+  //     mmenuAPI = null;
+  //   }
+  // }
 
-  window.addEventListener("resize", () => {
-    if (window.innerWidth < 992) initMmenu();
-    else destroyMmenu();
-  });
+  // window.addEventListener("resize", () => {
+  //   if (window.innerWidth < 992) initMmenu();
+  //   else destroyMmenu();
+  // });
 
-  initMmenu();
+  // initMmenu();
 
   new Swiper(".aboutSwiper", {
     pagination: {
