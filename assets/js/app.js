@@ -39,6 +39,10 @@ $(document).ready(function () {
       delay: 5000,
       disableOnInteraction: false
     },
+    navigation: {
+      nextEl: ".heroSliderNext",
+      prevEl: ".heroSliderPrev",
+    },
     slidesPerView: 1,
     pagination: false
   });
@@ -404,18 +408,18 @@ $(document).ajaxStop(function () {
       delay: 5000,
       disableOnInteraction: false
     },
-    // on: {
-    //   init: function () {
-    //     // set first bg on init
-    //     const firstBg = this.slides[this.activeIndex].dataset.bg;
-    //     document.querySelector(".bgImage").src = firstBg;
-    //   },
-    //   slideChange: function () {
-    //     // set bg when slide changes
-    //     const newBg = this.slides[this.activeIndex].dataset.bg;
-    //     document.querySelector(".bgImage").src = newBg;
-    //   }
-    // }
+  });
+  new Swiper(".resortImageSlider", {
+    pagination: {
+      el: ".my-swiper-pagination",
+      clickable: true,
+    },
+    speed: 400,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
   });
 
   var swiper = new Swiper(".reviewsSlider", {
@@ -473,6 +477,22 @@ $(document).ajaxStop(function () {
       },
     },
   });
+  var swiper = new Swiper(".exploreSecSlider", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+     autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+  });
+  var swiper = new Swiper(".awardsSlider", {
+    spaceBetween: 10,
+    loop: true,
+     autoplay: {
+      delay: 3000,
+    },
+  });
   var swiper = new Swiper(".experienceSlider", {
     slidesPerView: 1,
     spaceBetween: 10,
@@ -511,6 +531,33 @@ $(document).ajaxStop(function () {
     navigation: {
       nextEl: ".gallSliderNext",
       prevEl: ".gallSliderPrev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 50,
+      },
+    },
+  });
+  var swiper = new Swiper(".gallerySlider2", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    pagination: {
+      // el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".gallSliderNext2",
+      prevEl: ".gallSliderPrev2",
     },
     breakpoints: {
       640: {
