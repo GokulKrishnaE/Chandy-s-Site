@@ -481,7 +481,7 @@ $(document).ajaxStop(function () {
     slidesPerView: 1,
     spaceBetween: 10,
     loop: true,
-     autoplay: {
+    autoplay: {
       delay: 3000,
       disableOnInteraction: false
     },
@@ -583,8 +583,8 @@ $(document).ajaxStop(function () {
       clickable: true,
     },
     navigation: {
-      nextEl: ".gallSliderNext",
-      prevEl: ".gallSliderPrev",
+      nextEl: ".roomsSliderNext",
+      prevEl: ".roomsSliderPrev",
     },
     breakpoints: {
       640: {
